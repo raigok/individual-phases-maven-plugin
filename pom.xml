@@ -4,7 +4,7 @@
 
     <groupId>ee.originaal.maven.extensions</groupId>
     <artifactId>individual-phases-maven-extension</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <name>individual-phases-maven-extension</name>
     <description>
@@ -30,7 +30,7 @@
         <connection>scm:git:git@github.com:raigok/individual-phases-maven-extension.git</connection>
         <developerConnection>scm:git:git@github.com:raigok/individual-phases-maven-extension.git</developerConnection>
         <url>https://github.com/raigok/individual-phases-maven-extension</url>
-        <tag>individual-phases-maven-extension-1.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
