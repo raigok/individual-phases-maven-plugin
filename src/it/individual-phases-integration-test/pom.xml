@@ -1,0 +1,132 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>dummy-group-id</groupId>
+    <artifactId>dummy-artifact-id</artifactId>
+    <version>1.0.0</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <antrun.echo.output.relative.path>target/lifecycle-phases.txt</antrun.echo.output.relative.path>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>individual-phases</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>@project.groupId@</groupId>
+                        <artifactId>@project.artifactId@</artifactId>
+                        <version>@project.version@</version>
+                        <extensions>true</extensions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <id>antrun-in-initialize-phase</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <touch file="target/created-in-initialize-phase.txt"/>
+                            </target>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>antrun-in-process-resources-phase</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <touch file="target/created-in-process-resources-phase.txt"/>
+                            </target>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>antrun-in-compile-phase</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <touch file="target/created-in-compile-phase.txt"/>
+                            </target>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>antrun-in-process-classes-phase</id>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <touch file="target/created-in-process-classes-phase.txt"/>
+                            </target>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>antrun-in-test-compile-phase</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <touch file="target/created-in-test-compile-phase.txt"/>
+                            </target>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>antrun-in-prepare-package-phase</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <touch file="target/created-in-prepare-package-phase.txt"/>
+                            </target>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>antrun-in-package-phase</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <touch file="target/created-in-package-phase.txt"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
