@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ee.originaal.maven.extensions</groupId>
     <artifactId>individual-phases-maven-extension</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>individual-phases-maven-extension</name>
     <description>
@@ -32,7 +30,7 @@
         <connection>scm:git:git@github.com:raigok/individual-phases-maven-extension.git</connection>
         <developerConnection>scm:git:git@github.com:raigok/individual-phases-maven-extension.git</developerConnection>
         <url>https://github.com/raigok/individual-phases-maven-extension</url>
-        <tag>HEAD</tag>
+        <tag>individual-phases-maven-extension-1.0.0</tag>
     </scm>
 
     <distributionManagement>
