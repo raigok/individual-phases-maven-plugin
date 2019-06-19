@@ -162,5 +162,15 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>bintray</id>
+            <distributionManagement>
+                <repository>
+                    <id>bintray-raigo-maven-repo</id>
+                    <name>raigo-maven-repo</name>
+                    <url>https://api.bintray.com/maven/raigo/maven-repo/individual-phases-maven-plugin/;publish=1</url>
+                </repository>
+            </distributionManagement>
+        </profile>
     </profiles>
 </project>
