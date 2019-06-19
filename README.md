@@ -13,7 +13,7 @@ Add `individual-phases-maven-plugin` to your project's `pom.xml`:
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>ee.originaal.maven.extensions</groupId>
+                        <groupId>ee.originaal.maven.plugins</groupId>
                         <artifactId>individual-phases-maven-plugin</artifactId>
                         <version>[LATEST]</version>
                         <extensions>true</extensions> <!-- This is important -->
