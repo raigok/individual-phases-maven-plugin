@@ -2,15 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ee.originaal.maven.extensions</groupId>
-    <artifactId>individual-phases-maven-extension</artifactId>
+    <groupId>ee.originaal.maven.plugins</groupId>
+    <artifactId>individual-phases-maven-plugin</artifactId>
     <version>1.0.1-SNAPSHOT</version>
+    <packaging>maven-plugin</packaging>
 
-    <name>individual-phases-maven-extension</name>
+    <name>individual-phases-maven-plugin</name>
     <description>
         Maven plugin for for executing individual lifecycle phases
     </description>
-    <url>https://github.com/raigok/individual-phases-maven-extension</url>
+    <url>https://github.com/raigok/individual-phases-maven-plugin</url>
 
     <licenses>
         <license>
@@ -27,9 +28,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:raigok/individual-phases-maven-extension.git</connection>
-        <developerConnection>scm:git:git@github.com:raigok/individual-phases-maven-extension.git</developerConnection>
-        <url>https://github.com/raigok/individual-phases-maven-extension</url>
+        <connection>scm:git:git@github.com:raigok/individual-phases-maven-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:raigok/individual-phases-maven-plugin.git</developerConnection>
+        <url>https://github.com/raigok/individual-phases-maven-plugin</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -73,6 +74,19 @@
                     <execution>
                         <goals>
                             <goal>generate-metadata</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-plugin-plugin</artifactId>
+                <version>3.6.0</version>
+                <executions>
+                    <execution>
+                        <id>generate-helpmojo</id>
+                        <goals>
+                            <goal>helpmojo</goal>
                         </goals>
                     </execution>
                 </executions>

@@ -1,10 +1,10 @@
-individual-phases-maven-extension
+individual-phases-maven-plugin
 ===
 
-A [Maven extension][1] for executing individual lifecycle phases. It is meant to be used in build pipelines, where build steps could be run individually and in parallel. 
+A [Maven plugin][1] for executing individual lifecycle phases. It is meant to be used in build pipelines, where build steps could be run individually and in parallel. 
 
 ### Getting started
-Add `individual-phases-maven-extension` to your project's `pom.xml`:
+Add `individual-phases-maven-plugin` to your project's `pom.xml`:
 ```xml
 <project>
     <profiles>
@@ -14,8 +14,8 @@ Add `individual-phases-maven-extension` to your project's `pom.xml`:
                 <plugins>
                     <plugin>
                         <groupId>ee.originaal.maven.extensions</groupId>
-                        <artifactId>individual-phases-maven-extension</artifactId>
-                        <version>LATEST</version>
+                        <artifactId>individual-phases-maven-plugin</artifactId>
+                        <version>[LATEST]</version>
                         <extensions>true</extensions> <!-- This is important -->
                     </plugin>
                 </plugins>

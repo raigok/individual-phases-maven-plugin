@@ -1,4 +1,4 @@
-package ee.originaal.maven.extensions.individualphases;
+package ee.originaal.maven.plugins.individualphases;
 
 import static java.util.stream.Collectors.toMap;
 
